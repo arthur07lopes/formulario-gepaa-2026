@@ -5,8 +5,8 @@
  * Nunca coloque uma secret key ou service_role key neste arquivo.
  */
 window.GEPAA_SUPABASE_CONFIG = window.GEPAA_SUPABASE_CONFIG || {
-  projectUrl: "",
-  publishableKey: ""
+  projectUrl: "https://ytqkkierqhyzznvqvmlo.supabase.co",
+  publishableKey: "sb_publishable_HMM0hmJOI9qNe6VItSiTEA_qbewfF7W"
 };
 
 (function initializeGepaaSupabase() {
