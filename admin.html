@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b49">
+  <meta name="description" content="Área administrativa privada do sistema de avaliações GEPAA 2026.">
+  <title>Administração GEPAA 2026 | SENAI Carlos Tannhauser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/docx@9/dist/index.iife.js"></script>
+  <script src="database/supabase.js" defer></script>
+  <script src="reports/gerar-relatorio.js" defer></script>
+  <script src="admin.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+  <header class="admin-topbar">
+    <a class="admin-brand" href="index.html" aria-label="Voltar ao formulário público GEPAA 2026">
+      <img src="assets/gepaa-logo.png" alt="" width="54" height="50">
+      <span><strong>GEPAA 2026</strong><small>SENAI CARLOS TANNHAUSER · ADMINISTRAÇÃO</small></span>
+    </a>
+    <a class="back-link" href="index.html">Voltar ao formulário <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main-content" class="admin-shell">
+    <section id="loginPanel" class="login-panel" aria-labelledby="login-title">
+      <p class="eyebrow">ÁREA RESTRITA · ACESSO AUTORIZADO</p>
+      <h1 id="login-title">Painel de avaliações</h1>
+      <p class="login-intro">Entre com a conta autorizada pela administração do projeto para consultar as respostas do GEPAA 2026.</p>
+      <form id="loginForm" class="login-form">
+        <label for="adminEmail">E-mail institucional ou autorizado</label>
+        <input id="adminEmail" name="email" type="email" autocomplete="username" required>
+        <label for="adminPassword">Senha</label>
+        <input id="adminPassword" name="password" type="password" autocomplete="current-password" required>
+        <button class="button button-primary" type="submit" id="loginButton">Entrar no painel</button>
+        <p id="loginStatus" class="status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="security-note"><strong>Privacidade:</strong> as respostas não são disponibilizadas aos visitantes do formulário. O banco confirma a autorização de cada conta antes de liberar a leitura.</p>
+    </section>
+
+    <section id="dashboardPanel" class="dashboard-panel" hidden aria-labelledby="dashboard-title">
+      <div class="dashboard-heading">
+        <div>
+          <p class="eyebrow">ANÁLISE INSTITUCIONAL · 2026</p>
+          <h1 id="dashboard-title">Resultados das avaliações</h1>
+          <p id="lastUpdated" class="muted">Carregando dados…</p>
+        </div>
+        <div class="dashboard-actions">
+          <button id="refreshButton" class="button button-light" type="button">Atualizar dados</button>
+          <button id="exportDocxButton" class="button button-primary" type="button">Exportar relatório DOCX</button>
+          <button id="exportCsvButton" class="button button-light" type="button">Baixar CSV</button>
+          <button id="logoutButton" class="button button-outline" type="button">Sair</button>
+        </div>
+      </div>
+
+      <p id="dashboardStatus" class="status" role="status" aria-live="polite"></p>
+
+      <div class="metric-grid" aria-label="Indicadores principais">
+        <article class="metric-card"><span>Total de avaliações</span><strong id="totalResponses">—</strong><small>Registros recebidos</small></article>
+        <article class="metric-card"><span>Média geral</span><strong id="overallAverage">—</strong><small>Escala de 1 a 5</small></article>
+        <article class="metric-card"><span>Perfis registrados</span><strong id="profileCount">—</strong><small>Perfis informados</small></article>
+        <article class="metric-card"><span>Último recebimento</span><strong id="latestResponse">—</strong><small>Data local</small></article>
+      </div>
+
+      <section class="chart-grid" aria-label="Gráficos das avaliações">
+        <article class="chart-card"><h2>Avaliação geral dos ciclos</h2><p>Média por critério, de 1 a 5.</p><div class="chart-area"><canvas id="generalChart" role="img" aria-label="Gráfico de médias dos quatro critérios de avaliação geral."></canvas></div></article>
+        <article class="chart-card"><h2>Ciclos de Conversas Seguras</h2><p>Distribuição das avaliações por ciclo.</p><div class="chart-area"><canvas id="cyclesChart" role="img" aria-label="Gráfico com a distribuição das avaliações dos cinco ciclos temáticos."></canvas></div></article>
+        <article class="chart-card chart-wide"><h2>Visitas técnicas, eventos e capacitações</h2><p>Distribuição das avaliações das cinco atividades.</p><div class="chart-area chart-area-wide"><canvas id="activitiesChart" role="img" aria-label="Gráfico com a distribuição das avaliações das cinco atividades."></canvas></div></article>
+      </section>
+
+      <section class="responses-section" aria-labelledby="responses-title">
+        <div class="section-heading"><div><p class="eyebrow">BASE DE DADOS</p><h2 id="responses-title">Respostas individuais</h2></div><span id="responseCountLabel" class="count-pill">0 registros</span></div>
+        <div class="table-wrap">
+          <table class="responses-table">
+            <thead><tr><th scope="col">Recebida em</th><th scope="col">Perfil</th><th scope="col">Curso / Área</th><th scope="col">Turno</th><th scope="col">Detalhes</th></tr></thead>
+            <tbody id="responsesBody"><tr><td colspan="5">Nenhuma resposta carregada.</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+      <footer class="admin-footer">SENAI Carlos Tannhauser · Grupo Educacional de Prevenção de Acidentes e Assédio · GEPAA 2026</footer>
+    </section>
+  </main>
+  <script>
+    // A página não oferece cadastro público. A criação de contas é feita no Dashboard do Supabase.
+  </script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111c32">
+  <meta name="description" content="Formulário de Avaliação das Atividades GEPAA 2026 — SENAI Carlos Tannhauser, Santa Cruz do Sul/RS.">
+  <title>GEPAA 2026 | Avaliação das Atividades — SENAI Carlos Tannhauser</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="database/supabase.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o formulário</a>
+
+  <div class="page-backdrop" aria-hidden="true"></div>
+
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="brandbar">
+        <a class="senai-brand" href="https://www.senairs.org.br/unidades/senai-santa-cruz-do-sul" target="_blank" rel="noopener noreferrer" aria-label="SENAI Rio Grande do Sul — página da unidade de Santa Cruz do Sul">
+          <img
+            class="senai-logo"
+            src="https://www.senairs.org.br/sites/default/files/logo_senai.png"
+            alt="SENAI"
+            width="146"
+            height="38"
+          >
+          <span class="senai-wordmark-fallback" aria-hidden="true">SENAI</span>
+          <span class="senai-caption">SERVIÇO NACIONAL DE APRENDIZAGEM INDUSTRIAL</span>
+        </a>
+
+        <div class="brand-divider" aria-hidden="true"></div>
+
+        <div class="gepaa-brand">
+          <div class="gepaa-brand-copy">
+            <span class="brand-kicker">GRUPO EDUCACIONAL DE</span>
+            <strong>GEPAA</strong>
+            <span class="brand-subtitle">PREVENÇÃO DE ACIDENTES E ASSÉDIO</span>
+          </div>
+          <img src="assets/gepaa-logo.png" alt="Logotipo GEPAA Segurança: cruz verde dentro de um círculo verde e branco sobre fundo azul." width="74" height="68">
+        </div>
+      </div>
+
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> CULTURA DE PREVENÇÃO · CICLO 2026</p>
+          <h1>Copa da <span>Segurança</span> 2026</h1>
+          <p class="hero-subtitle">Árbitros da Segurança</p>
+          <p class="hero-program">Grupo Educacional de Prevenção de Acidentes e Assédio (GEPAA)</p>
+          <p class="hero-location">SENAI Carlos Tannhauser <span aria-hidden="true">/</span> Santa Cruz do Sul — RS</p>
+        </div>
+        <div class="hero-photo" role="img" aria-label="Fachada da unidade SENAI Carlos Tannhauser em Santa Cruz do Sul."></div>
+        <div class="hero-index" aria-hidden="true"><span>GEPAA</span><strong>26</strong></div>
+      </div>
+    </header>
+
+    <main id="conteudo" class="main-content">
+      <section class="intro-panel" aria-labelledby="form-title">
+        <div class="intro-heading">
+          <div>
+            <p class="section-overline">PESQUISA INSTITUCIONAL</p>
+            <h2 id="form-title">Formulário de Avaliação das Atividades GEPAA 2026</h2>
+          </div>
+          <span class="intro-mark" aria-hidden="true">01—05</span>
+        </div>
+        <p class="intro-description">Este formulário avalia as ações, eventos e visitas do GEPAA no SENAI Carlos Tannhauser para fortalecer a cultura de segurança e bem-estar na nossa unidade.</p>
+        <div class="meta-grid">
+          <div class="meta-item">
+            <span class="meta-label">PÚBLICO-ALVO</span>
+            <strong>Alunos(as), Instrutores(as) e Colaboradores(as)</strong>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">TEMPO ESTIMADO</span>
+            <strong>5 a 8 minutos</strong>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">SIGILO</span>
+            <strong>Uso exclusivo para análise educativa</strong>
+          </div>
+        </div>
+      </section>
+
+      <div class="privacy-note" role="note">
+        <span class="privacy-icon" aria-hidden="true">i</span>
+        <p>Responda com sinceridade. Não informe seu nome, matrícula ou outros dados que possam identificar você nos campos de comentário.</p>
+      </div>
+<form id="gepaaForm" class="survey-form" novalidate>
+        <section class="form-section" aria-labelledby="block-1-title">
+          <div class="section-band">
+            <span class="section-number">01</span>
+            <h2 id="block-1-title">Identificação do Respondente</h2>
+          </div>
+
+          <div class="identification-grid">
+            <fieldset class="question-card">
+              <legend><span class="question-number">1.</span> Perfil do Respondente:</legend>
+              <div class="choice-list">
+                <label class="choice"><input type="checkbox" name="profile" value="Aluno(a) de Aprendizagem Industrial Básica"><span class="custom-control" aria-hidden="true"></span><span>Aluno(a) de Aprendizagem Industrial Básica</span></label>
+                <label class="choice"><input type="checkbox" name="profile" value="Aluno(a) de Aprendizagem Industrial Técnica"><span class="custom-control" aria-hidden="true"></span><span>Aluno(a) de Aprendizagem Industrial Técnica</span></label>
+                <label class="choice"><input type="checkbox" name="profile" value="Instrutor(a) / Docente"><span class="custom-control" aria-hidden="true"></span><span>Instrutor(a) / Docente</span></label>
+                <label class="choice"><input type="checkbox" name="profile" value="Equipe Pedagógica / Administrativa / Manutenção"><span class="custom-control" aria-hidden="true"></span><span>Equipe Pedagógica / Administrativa / Manutenção</span></label>
+                <label class="choice"><input type="checkbox" name="profile" value="Membro da Equipe GEPAA 2026"><span class="custom-control" aria-hidden="true"></span><span>Membro da Equipe GEPAA 2026</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="question-card class-identification">
+              <legend><span class="question-number">2.</span> Identificação da Turma / Área:</legend>
+              <label class="field-label" for="courseArea">Curso/Área:</label>
+              <input class="text-field" id="courseArea" name="courseArea" type="text" maxlength="120" autocomplete="off">
+
+              <span class="field-label turn-label">Turno:</span>
+              <div class="choice-inline" role="group" aria-label="Turno">
+                <label class="choice"><input type="checkbox" name="shift" value="Manhã"><span class="custom-control" aria-hidden="true"></span><span>Manhã</span></label>
+                <label class="choice"><input type="checkbox" name="shift" value="Tarde"><span class="custom-control" aria-hidden="true"></span><span>Tarde</span></label>
+                <label class="choice"><input type="checkbox" name="shift" value="Noite"><span class="custom-control" aria-hidden="true"></span><span>Noite</span></label>
+              </div>
+            </fieldset>
+          </div>
+        </section>
+
+        <section class="form-section" aria-labelledby="block-2-title">
+          <div class="section-band">
+            <span class="section-number">02</span>
+            <h2 id="block-2-title">Avaliação dos Ciclos de “Conversas Seguras”</h2>
+          </div>
+          <p class="section-description">Diálogos educativos conduzidos pelos “Árbitros da Segurança” do GEPAA em salas e oficinas.</p>
+
+          <div class="subsection-heading">
+            <h3>2.1 Avaliação Geral dos Ciclos <span>(Escala de 1 a 5)</span></h3>
+            <p>1 = Inadequado <span aria-hidden="true">·</span> 5 = Excelente</p>
+          </div>
+
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Tabela de avaliação geral dos ciclos. Em telas pequenas, deslize horizontalmente para ver todas as notas.">
+            <table class="rating-table">
+              <caption class="visually-hidden">Avaliação geral dos ciclos de Conversas Seguras, com escala de 1 a 5.</caption>
+              <thead>
+                <tr>
+                  <th scope="col" class="criterion-head">Critério de Avaliação</th>
+                  <th scope="col"><span class="scale-number">1</span><span class="scale-caption">Inadequado</span></th>
+                  <th scope="col"><span class="scale-number">2</span></th>
+                  <th scope="col"><span class="scale-number">3</span></th>
+                  <th scope="col"><span class="scale-number">4</span></th>
+                  <th scope="col"><span class="scale-number">5</span><span class="scale-caption">Excelente</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Clareza e didática da equipe nas abordagens</th>
+                  <td colspan="5"><fieldset class="scale-options"><legend class="visually-hidden">Clareza e didática da equipe nas abordagens — escolha uma nota de 1 a 5</legend>
+                    <label><input type="radio" name="general_clarity" value="1"><span>1</span></label><label><input type="radio" name="general_clarity" value="2"><span>2</span></label><label><input type="radio" name="general_clarity" value="3"><span>3</span></label><label><input type="radio" name="general_clarity" value="4"><span>4</span></label><label><input type="radio" name="general_clarity" value="5"><span>5</span></label>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <th scope="row">Relevância dos temas para o dia a dia no SENAI</th>
+                  <td colspan="5"><fieldset class="scale-options"><legend class="visually-hidden">Relevância dos temas para o dia a dia no SENAI — escolha uma nota de 1 a 5</legend>
+                    <label><input type="radio" name="general_relevance" value="1"><span>1</span></label><label><input type="radio" name="general_relevance" value="2"><span>2</span></label><label><input type="radio" name="general_relevance" value="3"><span>3</span></label><label><input type="radio" name="general_relevance" value="4"><span>4</span></label><label><input type="radio" name="general_relevance" value="5"><span>5</span></label>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <th scope="row">Dinâmica e engajamento (“Cartões Amarelo, Vermelho e Verde”)</th>
+                  <td colspan="5"><fieldset class="scale-options"><legend class="visually-hidden">Dinâmica e engajamento — escolha uma nota de 1 a 5</legend>
+                    <label><input type="radio" name="general_engagement" value="1"><span>1</span></label><label><input type="radio" name="general_engagement" value="2"><span>2</span></label><label><input type="radio" name="general_engagement" value="3"><span>3</span></label><label><input type="radio" name="general_engagement" value="4"><span>4</span></label><label><input type="radio" name="general_engagement" value="5"><span>5</span></label>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <th scope="row">Respeito à duração das visitas (até 30 minutos)</th>
+                  <td colspan="5"><fieldset class="scale-options"><legend class="visually-hidden">Respeito à duração das visitas — escolha uma nota de 1 a 5</legend>
+                    <label><input type="radio" name="general_duration" value="1"><span>1</span></label><label><input type="radio" name="general_duration" value="2"><span>2</span></label><label><input type="radio" name="general_duration" value="3"><span>3</span></label><label><input type="radio" name="general_duration" value="4"><span>4</span></label><label><input type="radio" name="general_duration" value="5"><span>5</span></label>
+                  </fieldset></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="subsection-heading cycle-heading">
+            <h3>2.2 Avaliação Específica por Ciclo Temático</h3>
+          </div>
+          <div class="cycle-list">
+            <fieldset class="cycle-item">
+              <legend><strong>Ciclo 1 – Esse Lance é Seguro</strong> <span>(Prevenção de acidentes e práticas seguras)</span></legend>
+              <div class="choice-inline">
+                <label class="choice"><input type="radio" name="cycle_1" value="Ruim"><span class="custom-control" aria-hidden="true"></span><span>Ruim</span></label>
+                <label class="choice"><input type="radio" name="cycle_1" value="Regular"><span class="custom-control" aria-hidden="true"></span><span>Regular</span></label>
+                <label class="choice"><input type="radio" name="cycle_1" value="Bom"><span class="custom-control" aria-hidden="true"></span><span>Bom</span></label>
+                <label class="choice"><input type="radio" name="cycle_1" value="Excelente"><span class="custom-control" aria-hidden="true"></span><span>Excelente</span></label>
+                <label class="choice"><input type="radio" name="cycle_1" value="Não participei"><span class="custom-control" aria-hidden="true"></span><span>Não participei</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="cycle-item">
+              <legend><strong>Ciclo 1.2 – Alunos Novos</strong> <span>(Acolhimento e alinhamento de diretrizes de segurança)</span></legend>
+              <div class="choice-inline">
+                <label class="choice"><input type="radio" name="cycle_12" value="Ruim"><span class="custom-control" aria-hidden="true"></span><span>Ruim</span></label>
+                <label class="choice"><input type="radio" name="cycle_12" value="Regular"><span class="custom-control" aria-hidden="true"></span><span>Regular</span></label>
+                <label class="choice"><input type="radio" name="cycle_12" value="Bom"><span class="custom-control" aria-hidden="true"></span><span>Bom</span></label>
+                <label class="choice"><input type="radio" name="cycle_12" value="Excelente"><span class="custom-control" aria-hidden="true"></span><span>Excelente</span></label>
+                <label class="choice"><input type="radio" name="cycle_12" value="Não participei / Não se aplica"><span class="custom-control" aria-hidden="true"></span><span>Não participei / Não se aplica</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="cycle-item">
+              <legend><strong>Ciclo 2 – Vale Dar um Jeitinho?</strong> <span>(Riscos de improvisações e respeito aos procedimentos)</span></legend>
+              <div class="choice-inline">
+                <label class="choice"><input type="radio" name="cycle_2" value="Ruim"><span class="custom-control" aria-hidden="true"></span><span>Ruim</span></label>
+                <label class="choice"><input type="radio" name="cycle_2" value="Regular"><span class="custom-control" aria-hidden="true"></span><span>Regular</span></label>
+                <label class="choice"><input type="radio" name="cycle_2" value="Bom"><span class="custom-control" aria-hidden="true"></span><span>Bom</span></label>
+                <label class="choice"><input type="radio" name="cycle_2" value="Excelente"><span class="custom-control" aria-hidden="true"></span><span>Excelente</span></label>
+                <label class="choice"><input type="radio" name="cycle_2" value="Não participei"><span class="custom-control" aria-hidden="true"></span><span>Não participei</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="cycle-item">
+              <legend><strong>Ciclo 3 – Jogo Limpo da Segurança</strong> <span>(Housekeeping, organização e descarte de resíduos)</span></legend>
+              <div class="choice-inline">
+                <label class="choice"><input type="radio" name="cycle_3" value="Ruim"><span class="custom-control" aria-hidden="true"></span><span>Ruim</span></label>
+                <label class="choice"><input type="radio" name="cycle_3" value="Regular"><span class="custom-control" aria-hidden="true"></span><span>Regular</span></label>
+                <label class="choice"><input type="radio" name="cycle_3" value="Bom"><span class="custom-control" aria-hidden="true"></span><span>Bom</span></label>
+                <label class="choice"><input type="radio" name="cycle_3" value="Excelente"><span class="custom-control" aria-hidden="true"></span><span>Excelente</span></label>
+                <label class="choice"><input type="radio" name="cycle_3" value="Não participei"><span class="custom-control" aria-hidden="true"></span><span>Não participei</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="cycle-item">
+              <legend><strong>Ciclo 4 – Cuide de Você</strong> <span>(Outubro Rosa, saúde preventiva e autocuidado)</span></legend>
+              <div class="choice-inline">
+                <label class="choice"><input type="radio" name="cycle_4" value="Ruim"><span class="custom-control" aria-hidden="true"></span><span>Ruim</span></label>
+                <label class="choice"><input type="radio" name="cycle_4" value="Regular"><span class="custom-control" aria-hidden="true"></span><span>Regular</span></label>
+                <label class="choice"><input type="radio" name="cycle_4" value="Bom"><span class="custom-control" aria-hidden="true"></span><span>Bom</span></label>
+                <label class="choice"><input type="radio" name="cycle_4" value="Excelente"><span class="custom-control" aria-hidden="true"></span><span>Excelente</span></label>
+                <label class="choice"><input type="radio" name="cycle_4" value="Não participei"><span class="custom-control" aria-hidden="true"></span><span>Não participei</span></label>
+              </div>
+            </fieldset>
+          </div>
+        </section>
+
+        <section class="form-section" aria-labelledby="block-3-title">
+          <div class="section-band">
+            <span class="section-number">03</span>
+            <h2 id="block-3-title">Visitas Técnicas, Eventos e Capacitações</h2>
+          </div>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="Tabela de avaliação de visitas, eventos e capacitações. Em telas pequenas, deslize horizontalmente para ver todas as opções.">
+            <table class="activity-table">
+              <caption class="visually-hidden">Avaliação das cinco atividades, com as opções Péssimo, Regular, Bom, Excelente e Não participei.</caption>
+              <thead>
+                <tr>
+                  <th scope="col" class="activity-head">Atividade / Capacitação</th>
+                  <th scope="col">Péssimo</th>
+                  <th scope="col">Regular</th>
+                  <th scope="col">Bom</th>
+                  <th scope="col">Excelente</th>
+                  <th scope="col">Não<br>participei</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><strong>01. Estatísticas de Segurança</strong> (Análise de dados e prevenção)</th>
+                  <td colspan="5"><fieldset class="activity-options"><legend class="visually-hidden">Estatísticas de Segurança — selecione uma avaliação</legend>
+                    <label><input type="radio" name="activity_statistics" value="Péssimo"><span>Péssimo</span></label><label><input type="radio" name="activity_statistics" value="Regular"><span>Regular</span></label><label><input type="radio" name="activity_statistics" value="Bom"><span>Bom</span></label><label><input type="radio" name="activity_statistics" value="Excelente"><span>Excelente</span></label><label><input type="radio" name="activity_statistics" value="Não participei"><span>Não participei</span></label>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <th scope="row"><strong>02. Cultura de Segurança do Trabalho</strong> (Comportamento preventivo)</th>
+                  <td colspan="5"><fieldset class="activity-options"><legend class="visually-hidden">Cultura de Segurança do Trabalho — selecione uma avaliação</legend>
+                    <label><input type="radio" name="activity_culture" value="Péssimo"><span>Péssimo</span></label><label><input type="radio" name="activity_culture" value="Regular"><span>Regular</span></label><label><input type="radio" name="activity_culture" value="Bom"><span>Bom</span></label><label><input type="radio" name="activity_culture" value="Excelente"><span>Excelente</span></label><label><input type="radio" name="activity_culture" value="Não participei"><span>Não participei</span></label>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <th scope="row"><strong>03. CVV – Centro de Valorização da Vida</strong> (Saúde mental e apoio)</th>
+                  <td colspan="5"><fieldset class="activity-options"><legend class="visually-hidden">CVV – Centro de Valorização da Vida — selecione uma avaliação</legend>
+                    <label><input type="radio" name="activity_cvv" value="Péssimo"><span>Péssimo</span></label><label><input type="radio" name="activity_cvv" value="Regular"><span>Regular</span></label><label><input type="radio" name="activity_cvv" value="Bom"><span>Bom</span></label><label><input type="radio" name="activity_cvv" value="Excelente"><span>Excelente</span></label><label><input type="radio" name="activity_cvv" value="Não participei"><span>Não participei</span></label>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <th scope="row"><strong>04. Segurança Digital</strong> (Cibersegurança e boas práticas online)</th>
+                  <td colspan="5"><fieldset class="activity-options"><legend class="visually-hidden">Segurança Digital — selecione uma avaliação</legend>
+                    <label><input type="radio" name="activity_digital" value="Péssimo"><span>Péssimo</span></label><label><input type="radio" name="activity_digital" value="Regular"><span>Regular</span></label><label><input type="radio" name="activity_digital" value="Bom"><span>Bom</span></label><label><input type="radio" name="activity_digital" value="Excelente"><span>Excelente</span></label><label><input type="radio" name="activity_digital" value="Não participei"><span>Não participei</span></label>
+                  </fieldset></td>
+                </tr>
+                <tr>
+                  <th scope="row"><strong>05. Primeiros Socorros</strong> (Atendimento emergencial)</th>
+                  <td colspan="5"><fieldset class="activity-options"><legend class="visually-hidden">Primeiros Socorros — selecione uma avaliação</legend>
+                    <label><input type="radio" name="activity_first_aid" value="Péssimo"><span>Péssimo</span></label><label><input type="radio" name="activity_first_aid" value="Regular"><span>Regular</span></label><label><input type="radio" name="activity_first_aid" value="Bom"><span>Bom</span></label><label><input type="radio" name="activity_first_aid" value="Excelente"><span>Excelente</span></label><label><input type="radio" name="activity_first_aid" value="Não participei"><span>Não participei</span></label>
+                  </fieldset></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="form-section" aria-labelledby="block-4-title">
+          <div class="section-band">
+            <span class="section-number">04</span>
+            <h2 id="block-4-title">Percepção de Mudança de Comportamento e Cultura</h2>
+          </div>
+
+          <div class="long-question-list">
+            <fieldset class="long-question">
+              <legend><span class="question-number">1.</span> Percebeu mudanças nas práticas de segurança na sua turma/unidade após as ações?</legend>
+              <div class="choice-list">
+                <label class="choice"><input type="radio" name="perception_change" value="Sim, houve uma mudança significativa e perceptível nas atitudes de todos."><span class="custom-control" aria-hidden="true"></span><span>Sim, houve uma mudança significativa e perceptível nas atitudes de todos.</span></label>
+                <label class="choice"><input type="radio" name="perception_change" value="Sim, em alguns momentos ou aspectos específicos (ex: uso correto de EPIs / organização)."><span class="custom-control" aria-hidden="true"></span><span>Sim, em alguns momentos ou aspectos específicos (ex: uso correto de EPIs / organização).</span></label>
+                <label class="choice"><input type="radio" name="perception_change" value="Neutro / Pouca mudança observada."><span class="custom-control" aria-hidden="true"></span><span>Neutro / Pouca mudança observada.</span></label>
+                <label class="choice"><input type="radio" name="perception_change" value="Não observei alterações no comportamento dos colegas/turma."><span class="custom-control" aria-hidden="true"></span><span>Não observei alterações no comportamento dos colegas/turma.</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="long-question">
+              <legend><span class="question-number">2.</span> Como avalia a ideia gamificada “Copa da Segurança 2026” (cartões educativos e mediação dos alunos)?</legend>
+              <div class="choice-list">
+                <label class="choice"><input type="radio" name="perception_gamification" value="Excelente – Deixou o aprendizado mais dinâmico e interessante."><span class="custom-control" aria-hidden="true"></span><span>Excelente – Deixou o aprendizado mais dinâmico e interessante.</span></label>
+                <label class="choice"><input type="radio" name="perception_gamification" value="Boa – Ajudou a fixar os conteúdos de forma descontraída."><span class="custom-control" aria-hidden="true"></span><span>Boa – Ajudou a fixar os conteúdos de forma descontraída.</span></label>
+                <label class="choice"><input type="radio" name="perception_gamification" value="Regular – Interessante, mas poderia ter sido melhor explorada."><span class="custom-control" aria-hidden="true"></span><span>Regular – Interessante, mas poderia ter sido melhor explorada.</span></label>
+                <label class="choice"><input type="radio" name="perception_gamification" value="Ruim / Indiferente – Não agregou ao aprendizado."><span class="custom-control" aria-hidden="true"></span><span>Ruim / Indiferente – Não agregou ao aprendizado.</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="long-question">
+              <legend><span class="question-number">3.</span> As abordagens sobre Prevenção ao Assédio (Moral e Sexual) e Comunicação Respeitosa foram suficientes?</legend>
+              <div class="choice-list">
+                <label class="choice"><input type="radio" name="perception_harassment" value="Sim, o tema foi tratado com clareza, respeito e responsabilidade."><span class="custom-control" aria-hidden="true"></span><span>Sim, o tema foi tratado com clareza, respeito e responsabilidade.</span></label>
+                <label class="choice"><input type="radio" name="perception_harassment" value="Parcialmente, gostaria de ter aprofundado mais o assunto."><span class="custom-control" aria-hidden="true"></span><span>Parcialmente, gostaria de ter aprofundado mais o assunto.</span></label>
+                <label class="choice"><input type="radio" name="perception_harassment" value="Não, a abordagem foi insuficiente."><span class="custom-control" aria-hidden="true"></span><span>Não, a abordagem foi insuficiente.</span></label>
+              </div>
+            </fieldset>
+          </div>
+        </section>
+
+        <section class="form-section" aria-labelledby="block-5-title">
+          <div class="section-band">
+            <span class="section-number">05</span>
+            <h2 id="block-5-title">Sugestões, Elogios e Críticas</h2>
+          </div>
+
+          <div class="open-question-list">
+            <div class="open-question">
+              <label for="memorable"><span class="question-number">1.</span> Qual ação ou tema do GEPAA em 2026 foi o mais marcante para você e por quê?</label>
+              <textarea id="memorable" name="memorable" rows="3" maxlength="1200"></textarea>
+            </div>
+            <div class="open-question">
+              <label for="nextCycle"><span class="question-number">2.</span> Que novos temas ou atividades gostaria de ver nas ações do GEPAA no próximo ciclo (2027)?</label>
+              <textarea id="nextCycle" name="nextCycle" rows="3" maxlength="1200"></textarea>
+            </div>
+            <div class="open-question">
+              <label for="suggestions"><span class="question-number">3.</span> Comentários, elogios ou sugestões de melhoria para a equipe GEPAA do SENAI Carlos Tannhauser:</label>
+              <textarea id="suggestions" name="suggestions" rows="3" maxlength="1200"></textarea>
+            </div>
+          </div>
+        </section>
+
+        <div class="form-actions">
+          <button class="button button-secondary" type="reset">Limpar respostas</button>
+          <button class="button button-primary" type="submit" id="submitButton">Enviar avaliação <span aria-hidden="true">↗</span></button>
+        </div>
+        <p id="formStatus" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      </form>
+
+      <footer class="site-footer">
+        <p><strong>SENAI Carlos Tannhauser</strong> <span aria-hidden="true">—</span> GEPAA 2026</p>
+        <p>Obrigado pela sua participação!</p>
+        <a href="https://www.senairs.org.br/unidades/senai-santa-cruz-do-sul" target="_blank" rel="noopener noreferrer">Conheça a unidade <span aria-hidden="true">↗</span></a>
+      </footer>
+    </main>
+  </div>
+<noscript>
+    <p class="noscript-message">Para enviar suas respostas, ative o JavaScript no navegador. O conteúdo do formulário continua disponível para leitura.</p>
+  </noscript>
+</body>
+</html>
